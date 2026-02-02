@@ -1,9 +1,8 @@
 
-function produtosSemStock(inventario) {
-    let listaSemStock = [];
-    const produtoSemStock = inventario.some(produto => produto.emStock == false);
-    listaSemStock = inventario.filter(produto => produto.emStock == false);
-    return listaSemStock;
+function precosComIva(inventario) {
+    const listaPrecoIVA = inventario.map(function(inventario){ 
+        let precoIVA = inventario.preco * 1.23;
+    })
 }
 
-console.log(produtosSemStock(inventario));
+console.log(precosComIva(inventario));

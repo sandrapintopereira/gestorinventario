@@ -16,7 +16,7 @@ true },
 emStock: true }
 ];
 
-/*function produtosEmStock(inventario) {
+function produtosEmStock(inventario) {
     let produtosEmStock = inventario.filter(stock => stock.emStock);
     return produtosEmStock;
 }
@@ -35,7 +35,7 @@ function produtosEmStockAbaixoDe100(inventario) {
     return produtosEmStockAbaixoDe100 = produtosFiltrados
 }
 
-console.log(produtosEmStockAbaixoDe100(inventario));*/
+console.log(produtosEmStockAbaixoDe100(inventario));
 
 
 
@@ -48,3 +48,16 @@ function produtosSemStock(inventario) {
 }}
 
 console.log(produtosSemStock(inventario));
+
+
+
+function precosComIva(inventario) {
+    const listaPrecoIVA = inventario.map(function(inventario){ 
+        return inventario.preco * 1.23;
+    })
+    
+    return 'Preços com IVA: ' + listaPrecoIVA.toLocaleString('pt-PT', {style: 'currency', currency: 'EUR'});
+}
+
+console.log(precosComIva(inventario));
+
