@@ -21,7 +21,9 @@ emStock: true }
     return produtosEmStock;
 }
 
-console.log(produtosEmStock(inventario));*/
+console.log(produtosEmStock(inventario));
+
+
 
 function produtosEmStockAbaixoDe100(inventario) {
     let produtosFiltrados = [];
@@ -32,5 +34,17 @@ function produtosEmStockAbaixoDe100(inventario) {
 })
     return produtosEmStockAbaixoDe100 = produtosFiltrados
 }
-console.log(produtosEmStockAbaixoDe100(inventario));
 
+console.log(produtosEmStockAbaixoDe100(inventario));*/
+
+
+
+function produtosSemStock(inventario) {
+    let listaSemStock = [];
+    if(inventario.some(produto => produto.emStock == false)) {
+    listaSemStock = inventario.filter(produto => produto.emStock == false)
+    return listaSemStock;
+
+}}
+
+console.log(produtosSemStock(inventario));
