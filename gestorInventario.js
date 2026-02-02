@@ -15,3 +15,8 @@ true },
  { id: 8, nome: "Rato Sem Fios Vertical", preco: 55, categoria: ["Informática", "Periféricos"],
 emStock: true }
 ];
+
+let produtosEmStock = inventario.filter(stock => stock.emStock);
+
+console.log(produtosEmStock);
+
