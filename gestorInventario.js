@@ -35,7 +35,7 @@ function produtosEmStockAbaixoDe100(inventario) {
     return produtosEmStockAbaixoDe100 = produtosFiltrados
 }
 
-console.log(produtosEmStockAbaixoDe100(inventario));
+console.log(produtosEmStockAbaixoDe100(inventario));*/
 
 
 //tem um erro que aparece array em vez das categorias
@@ -51,7 +51,7 @@ console.log(produtosSemStock(inventario));
 
 
 
-function precosComIva(inventario) {
+/*function precosComIva(inventario) {
     const listaPrecoIVA = inventario.map(function(inventario){ 
         return inventario.preco * 1.23;
     })
@@ -59,7 +59,7 @@ function precosComIva(inventario) {
     return 'Preços com IVA: ' + listaPrecoIVA.toLocaleString('pt-PT', {style: 'currency', currency: 'EUR'});
 }
 
-console.log(precosComIva(inventario));*/
+console.log(precosComIva(inventario));
 
 function valorTotal(inventario) {
     const totalInventario = inventario.reduce(function(acumulado, valorAtual) {
@@ -69,5 +69,5 @@ function valorTotal(inventario) {
     return totalInventario;
 }
 
-console.log(valorTotal(inventario));
+console.log(valorTotal(inventario));*/
 
