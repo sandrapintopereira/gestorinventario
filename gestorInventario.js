@@ -1,0 +1,73 @@
+const inventario = [
+ { id: 1, nome: "Teclado Mecânico RGB", preco: 85, categoria: ["Informática", "Periféricos"],
+emStock: true },
+ { id: 2, nome: "Frigideira a Ar (Air Fryer)", preco: 110, categoria: ["Eletrodomésticos", "Cozinha"],
+emStock: true },
+ { id: 3, nome: "Cadeira de Escritório Ergonómica", preco: 180, categoria: ["Escritório",
+"Mobiliário"], emStock: false },
+ { id: 4, nome: "Ecrã Curvo 27' 144Hz", preco: 250, categoria: ["Informática", "Ecrãs"], emStock:
+true },
+ { id: 5, nome: "Máquina de Café de Cápsulas", preco: 75, categoria: ["Eletrodomésticos",
+"Cozinha"], emStock: true },
+ { id: 6, nome: "Caderno Inteligente A5", preco: 30, categoria: ["Escritório", "Papelaria"], emStock:
+true },
+ { id: 7, nome: "Trotinete Elétrica", preco: 450, categoria: ["Lazer", "Mobilidade"], emStock: false },
+ { id: 8, nome: "Rato Sem Fios Vertical", preco: 55, categoria: ["Informática", "Periféricos"],
+emStock: true }
+];
+
+/*function produtosEmStock(inventario) {
+    let produtosEmStock = inventario.filter(stock => stock.emStock);
+    return produtosEmStock;
+}
+
+console.log(produtosEmStock(inventario));
+
+
+
+function produtosEmStockAbaixoDe100(inventario) {
+    let produtosFiltrados = [];
+    let produtosEmStockAbaixoDe100 = inventario.filter(function(produto) {
+    if(produto.emStock && produto.preco < 100) {
+       produtosFiltrados.push(produto);
+    }
+})
+    return produtosEmStockAbaixoDe100 = produtosFiltrados
+}
+
+console.log(produtosEmStockAbaixoDe100(inventario));
+
+
+//tem um erro que aparece array em vez das categorias
+function produtosSemStock(inventario) {
+    let listaSemStock = [];
+    const semStock = inventario.some(produto => produto.emStock == false)
+    listaSemStock = inventario.filter(produto => produto.emStock == false)
+
+    return {semStock, listaSemStock};
+}
+
+console.log(produtosSemStock(inventario));
+
+
+
+function precosComIva(inventario) {
+    const listaPrecoIVA = inventario.map(function(inventario){ 
+        return inventario.preco * 1.23;
+    })
+    
+    return 'Preços com IVA: ' + listaPrecoIVA.toLocaleString('pt-PT', {style: 'currency', currency: 'EUR'});
+}
+
+console.log(precosComIva(inventario));*/
+
+function valorTotal(inventario) {
+    const totalInventario = inventario.reduce(function(acumulado, valorAtual) {
+        return acumulado + valorAtual.preco;
+    }, 0)
+
+    return totalInventario;
+}
+
+console.log(valorTotal(inventario));
+
