@@ -16,7 +16,10 @@ true },
 emStock: true }
 ];
 
-let produtosEmStock = inventario.filter(stock => stock.emStock);
+function produtosEmStock(inventario) {
+    let produtosEmStock = inventario.filter(stock => stock.emStock);
+    return produtosEmStock;
+}
 
-console.log(produtosEmStock);
+console.log(produtosEmStock(inventario));
 
