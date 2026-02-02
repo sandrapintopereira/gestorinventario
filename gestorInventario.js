@@ -16,7 +16,7 @@ true },
 emStock: true }
 ];
 
-function produtosEmStock(inventario) {
+/*function produtosEmStock(inventario) {
     let produtosEmStock = inventario.filter(stock => stock.emStock);
     return produtosEmStock;
 }
@@ -38,14 +38,14 @@ function produtosEmStockAbaixoDe100(inventario) {
 console.log(produtosEmStockAbaixoDe100(inventario));
 
 
-
+//tem um erro que aparece array em vez das categorias
 function produtosSemStock(inventario) {
     let listaSemStock = [];
-    if(inventario.some(produto => produto.emStock == false)) {
+    const semStock = inventario.some(produto => produto.emStock == false)
     listaSemStock = inventario.filter(produto => produto.emStock == false)
-    return listaSemStock;
 
-}}
+    return {semStock, listaSemStock};
+}
 
 console.log(produtosSemStock(inventario));
 
@@ -59,5 +59,15 @@ function precosComIva(inventario) {
     return 'Preços com IVA: ' + listaPrecoIVA.toLocaleString('pt-PT', {style: 'currency', currency: 'EUR'});
 }
 
-console.log(precosComIva(inventario));
+console.log(precosComIva(inventario));*/
+
+function valorTotal(inventario) {
+    const totalInventario = inventario.reduce(function(acumulado, valorAtual) {
+        return acumulado + valorAtual.preco;
+    }, 0)
+
+    return totalInventario;
+}
+
+console.log(valorTotal(inventario));
 
