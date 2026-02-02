@@ -16,10 +16,21 @@ true },
 emStock: true }
 ];
 
-function produtosEmStock(inventario) {
+/*function produtosEmStock(inventario) {
     let produtosEmStock = inventario.filter(stock => stock.emStock);
     return produtosEmStock;
 }
 
-console.log(produtosEmStock(inventario));
+console.log(produtosEmStock(inventario));*/
+
+function produtosEmStockAbaixoDe100(inventario) {
+    let produtosFiltrados = [];
+    let produtosEmStockAbaixoDe100 = inventario.filter(function(produto) {
+    if(produto.emStock && produto.preco < 100) {
+       produtosFiltrados.push(produto);
+    }
+})
+    return produtosEmStockAbaixoDe100 = produtosFiltrados
+}
+console.log(produtosEmStockAbaixoDe100(inventario));
 
